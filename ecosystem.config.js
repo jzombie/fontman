@@ -15,7 +15,8 @@ module.exports = {
       env: {
         NODE_ENV: "development",
       },
-      watch: true
+      watch: ['backend'],
+      ignore_watch : ['node_modules']
     }
   ]
 }
