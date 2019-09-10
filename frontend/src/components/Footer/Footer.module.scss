@@ -1,0 +1,39 @@
+.footer {
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  color: #000;
+  padding: 5px;
+  text-align: center;
+
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a7c7dc+0,85b2d3+100;Blue+Grey+3D */
+  background: #a7c7dc; /* Old browsers */
+  background: -moz-linear-gradient(top,  #a7c7dc 0%, #85b2d3 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #a7c7dc 0%,#85b2d3 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #a7c7dc 0%,#85b2d3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7c7dc', endColorstr='#85b2d3',GradientType=0 ); /* IE6-9 */
+
+  .sponsor {
+    vertical-align: middle;
+
+    span.sponsor-me-text {
+      font-style: italic;
+    }
+
+    img {
+      vertical-align: middle;
+      height: 25px;
+    }
+
+    .zenOSmosis {
+      margin: 8px 8px;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      .zenOSmosis {
+        float: right;
+        margin: 0px 8px;
+      }
+    }
+  }
+}
