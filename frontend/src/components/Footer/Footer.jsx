@@ -57,7 +57,7 @@ const Footer = (props) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={BuyMeACoffeeSVG} />
+          <img alt="BuyMeACoffee" src={BuyMeACoffeeSVG} />
         </a>
         <span> | </span>
         <a
@@ -65,11 +65,17 @@ const Footer = (props) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={PayPalSVG} />
+          <img alt="PayPal" src={PayPalSVG} />
         </a>
 
         <div className={style['zenOSmosis']}>
-          <img src={ZenOSmosisSVG} />
+          <a
+            href="https://zenosmosis.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img alt="zenOSmosis" src={ZenOSmosisSVG} />
+          </a>
         </div>
       </div>
   </footer>
