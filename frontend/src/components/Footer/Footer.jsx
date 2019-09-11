@@ -52,7 +52,21 @@ const Footer = (props) => {
 
       <div className={style['sponsor']}>
         <span className={style['sponsor-me-text']}>Sponsor me:</span>
-        <img src={BuyMeACoffeeSVG} /> | <img src={PayPalSVG} />
+        <a
+          href="https://www.buymeacoffee.com/Kg8VCULYI"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={BuyMeACoffeeSVG} />
+        </a>
+        <span> | </span>
+        <a
+          href="https://paypal.me/zenOSmosis"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={PayPalSVG} />
+        </a>
 
         <div className={style['zenOSmosis']}>
           <img src={ZenOSmosisSVG} />
