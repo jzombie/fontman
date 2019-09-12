@@ -135,6 +135,21 @@ class ManufacturedReactComponent extends EventEmitter {
   }
 
   /**
+   * @return {Promise<void>}
+   */
+  async deleteZippedReactComponent() {
+    return new Promise((resolve, reject) => {
+      fs.unlink(this._zipFilePath, (error) => {
+        if (error) {
+          return reject(error);
+        } else {
+          return resolve();
+        }
+      });
+    });
+  }
+
+  /**
    * Creates temp directory structures for processing.
    * 
    * @return {Promise<void>}

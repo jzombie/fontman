@@ -3,6 +3,11 @@ const { ManufacturedReactComponent,
   EVT_COMPLETE
 } = require('../classes/ManufacturedReactComponent');
 
+/**
+ * @param {string} cssTemplateString 
+ * @param {string} uuid
+ * @return {Promise<ManufacturedReactComponent}
+ */
 const createReactComponent = (cssTemplateString, uuid) => {
   return new Promise((resolve, reject) => {
     const manufacturedReactComponent = new ManufacturedReactComponent(cssTemplateString, uuid);
@@ -14,7 +19,16 @@ const createReactComponent = (cssTemplateString, uuid) => {
     manufacturedReactComponent.on(EVT_COMPLETE, (data) => {
       const { zipFilePath } = data;
 
-      resolve(zipFilePath);
+      resolve({
+        zipFilePath,
+        deleteZipFile: async () => {
+          try {
+            await manufacturedReactComponent.deleteZippedReactComponent();
+          } catch (exc) {
+            throw exc;
+          }
+        }
+      });
     });
   });
 };

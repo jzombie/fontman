@@ -27,10 +27,13 @@ app.post('/api/react-component-download-request', async (req, res) => {
   try {
     const { cssTemplateString, uuid } = req.body;
 
-    const zipFilePath = await createReactComponent(cssTemplateString, uuid);
+    const { zipFilePath, deleteZipFile } = await createReactComponent(cssTemplateString, uuid);
 
     await new Promise((resolve, reject) => {
       res.sendFile(zipFilePath, (error) => {
+        // No need to await this
+        deleteZipFile();
+
         if (error) {
           return reject(error);
         } else {
