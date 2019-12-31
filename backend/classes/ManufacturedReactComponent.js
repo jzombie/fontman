@@ -17,9 +17,7 @@ import './style.css';
 /**
  * Dynamically generated ReactComponent.
  */ 
-const DynamicIcon = (props) => {
-  const { className, ...propsRest } = props;
-
+const DynamicIcon = ({ className, ...propsRest }) => {
   return (
     <i
       {...propsRest}
